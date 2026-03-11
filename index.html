@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokédex V2</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="background-decor">
+      <div class="pokeball-bg"></div>
+    </div>
+
+    <nav class="navbar">
+      <div class="nav-left">
+        <button class="menu-button" aria-label="Open Menu">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="nav-middle">
+        <div class="logo">
+          <div class="glowing-logo-icon"></div>
+          <h1>Pokédex</h1>
+        </div>
+      </div>
+
+      <div class="nav-right">
+        <div class="search-wrapper">
+          <div class="search-input-box">
+            <svg
+              class="search-icon"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input
+              type="text"
+              id="pokemon-search"
+              placeholder="Search Pokémon..."
+              autocomplete="off"
+            />
+          </div>
+
+          <div class="search-dropdown-menu" id="search-results">
+            <ul class="results-list">
+              <!-- <li class="result-item">
+                <span class="dex-number">#001</span>
+                <span class="pokemon-name">Bulbasaur</span>
+              </li>
+              <li class="result-item">
+                <span class="dex-number">#025</span>
+                <span class="pokemon-name">Pikachu</span>
+              </li>
+              <li class="result-item">
+                <span class="dex-number">#006</span>
+                <span class="pokemon-name">Charizard</span>
+              </li> -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="app-layout">
+      <section class="pokedex-section">
+        <div class="classic-pokedex">
+          <div class="pokedex-top-lights">
+            <div class="big-blue-light">
+              <div class="glass-glare"></div>
+            </div>
+            <div class="traffic-lights">
+              <div class="indicator red-light"></div>
+              <div class="indicator yellow-light"></div>
+              <div class="indicator green-light"></div>
+            </div>
+          </div>
+
+          <div class="screen-bezels">
+            <div class="inner-screen-housing">
+              <div class="tiny-screen-lights">
+                <div class="tiny-dot"></div>
+                <div class="tiny-dot"></div>
+              </div>
+
+              <div class="lcd-screen" id="pokedex-display">
+                <div class="sprite-container">
+                  <img
+                    src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
+                    alt="Front view"
+                    class="sprite-image front"
+                  />
+                  <img
+                    src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/25.png"
+                    alt="Back view"
+                    class="sprite-image back"
+                  />
+                </div>
+
+                <div class="pokemon-info">
+                  <h2 class="name-display">
+                    Pikachu <span class="id-display">#025</span>
+                  </h2>
+
+                  <div class="type-container">
+                    <span class="type-badge type-electric">Electric</span>
+                  </div>
+
+                  <div class="physical-stats">
+                    <div class="stat-block">
+                      <span class="stat-name">HT</span>
+                      <span class="stat-value Height">0.4m</span>
+                    </div>
+                    <div class="stat-block">
+                      <span class="stat-name">WT</span>
+                      <span class="stat-value Weight">6.0kg</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="screen-controls-bottom">
+                <div class="speaker-vents">
+                  <div class="vent-line"></div>
+                  <div class="vent-line"></div>
+                  <div class="vent-line"></div>
+                  <div class="vent-line"></div>
+                </div>
+
+                <button
+                  class="play-cry-button"
+                  id="play-sound-btn"
+                  title="Play Cry"
+                >
+                  <svg
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polygon
+                      points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"
+                    ></polygon>
+                    <path
+                      d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="bottom-controls">
+            <div class="directional-pad">
+              <div class="dpad-button up"></div>
+              <div class="dpad-button right"></div>
+              <div class="dpad-button down"></div>
+              <div class="dpad-button left"></div>
+              <div class="dpad-center"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- <section class="extra-info-section">
+            <div class="glassy-card">
+                <h3>Ready for Code</h3>
+                <p>The layout is set up. Now it's your turn to wire up the JavaScript and bring this Pokédex to life! 🚀</p>
+            </div>
+        </section> -->
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
