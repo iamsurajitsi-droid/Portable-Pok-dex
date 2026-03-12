@@ -144,61 +144,86 @@ function fetchPokemon(url) {
         case "normal":
           typeBadge.style.backgroundColor = "#A8A878";
           break;
+
         case "fire":
           typeBadge.style.backgroundColor = "#F08030";
           break;
+
         case "water":
           typeBadge.style.backgroundColor = "#6890F0";
+          typeBadge.style.color = "white";
           break;
+
         case "electric":
           typeBadge.style.backgroundColor = "#F8D030";
           break;
+
         case "grass":
           typeBadge.style.backgroundColor = "#78C850";
           break;
+
         case "ice":
           typeBadge.style.backgroundColor = "#98D8D8";
           break;
+
         case "fighting":
           typeBadge.style.backgroundColor = "#C03028";
+          typeBadge.style.color = "white";
           break;
+
         case "poison":
           typeBadge.style.backgroundColor = "#A040A0";
+          typeBadge.style.color = "white";
           break;
+
         case "ground":
           typeBadge.style.backgroundColor = "#E0C068";
           break;
+
         case "flying":
           typeBadge.style.backgroundColor = "#A890F0";
+          typeBadge.style.color = "white";
           break;
+
         case "psychic":
           typeBadge.style.backgroundColor = "#F85888";
+          typeBadge.style.color = "white";
           break;
+
         case "bug":
           typeBadge.style.backgroundColor = "#A8B820";
           break;
+
         case "rock":
           typeBadge.style.backgroundColor = "#B8A038";
           break;
+
         case "ghost":
           typeBadge.style.backgroundColor = "#705898";
+          typeBadge.style.color = "white";
           break;
+
         case "dragon":
           typeBadge.style.backgroundColor = "#7038F8";
+          typeBadge.style.color = "white";
           break;
+
         case "dark":
           typeBadge.style.backgroundColor = "#705848";
+          typeBadge.style.color = "white";
           break;
+
         case "steel":
           typeBadge.style.backgroundColor = "#B8B8D0";
           break;
+
         case "fairy":
           typeBadge.style.backgroundColor = "#EE99AC";
           break;
 
         default:
-          // Unknown / missing type
-          typeBadge.style.backgroundColor = "#68A090"; // grayish teal fallback
+          typeBadge.style.backgroundColor = "#68A090";
+          typeBadge.style.color = "white";
           console.warn(`Unknown Pokémon type: ${type}`);
           break;
       }
