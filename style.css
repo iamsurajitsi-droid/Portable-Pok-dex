@@ -110,6 +110,12 @@ body {
   }
 }
 
+@media screen and (min-width: 360px) and (max-width: 400px) {
+  .classic-pokedex{
+    max-height: 580px;
+  }
+}
+
 .logo {
   display: flex;
   align-items: center;
